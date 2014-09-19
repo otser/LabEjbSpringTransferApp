@@ -148,7 +148,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.4.1</version>
+				<version>2.2.1</version>
 				<executions>
 					<execution>
 						<id>default</id>
@@ -156,9 +156,12 @@
 							<goal>perform</goal>
 						</goals>
 						<configuration>
-							<pomFileName>
+							<!-- <pomFileName>
 								./pom.xml
-							</pomFileName>
+							</pomFileName> -->
+							 <remoteTagging>true</remoteTagging>
+				        	<useReleaseProfile>false</useReleaseProfile>
+							<autoVersionSubmodules>true</autoVersionSubmodules>
 						</configuration>
 					</execution>
 				</executions>
@@ -167,10 +170,11 @@
     </build>
     
     <scm>
-    <url>http://localhost/Bonobo.Git.Server/Repository/GeneralTestRepo</url>
-    <connection>scm:git:http://localhost/Bonobo.Git.Server/GeneralTestRepo.git</connection>
-    <developerConnection>scm:git:http://localhost/Bonobo.Git.Server/GeneralTestRepo.git</developerConnection>
-	</scm>
+    <url>http://localhost/Bonobo.Git.Server/LabEjbSpringTransferApp.git</url>
+    <connection>scm:git:http://localhost/Bonobo.Git.Server/LabEjbSpringTransferApp.git</connection>
+    <developerConnection>scm:git:http://localhost/Bonobo.Git.Server/LabEjbSpringTransferApp.git</developerConnection>
+	<tag>transfer.build-0.0.1</tag>
+  </scm>
 	
 	<!-- Dans ce tag distributionManagement, indiquer à Maven où déposer les artifacts générés par la release. -->   
 	<!-- Emplacement où seront générés les artefacts après la création d'une release -->
@@ -186,6 +190,5 @@
             <url>file:///D:/tools/mavenReleases/repository/snapshotrepo</url>
         </snapshotRepository>
     </distributionManagement>
-	
 	
 </project>
