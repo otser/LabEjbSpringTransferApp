@@ -1,0 +1,191 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.softexploration.lab.ejbspring</groupId>
+	<artifactId>transfer.build</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>transfer.build</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.version>3.2.2.RELEASE</spring.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>6.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		
+		<!-- <dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-install-plugin</artifactId>
+			<version>2.5.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>2.17</version>
+		</dependency> -->
+		
+		<dependency>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-jar-plugin</artifactId>
+	<version>2.3.2</version>
+</dependency>
+		
+		
+		
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.softexploration.lab.ejbspring</groupId>
+				<artifactId>transfer.app</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softexploration.lab.ejbspring</groupId>
+				<artifactId>transfer.facade.ejb</artifactId>
+				<type>ejb</type>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softexploration.lab.ejbspring</groupId>
+				<artifactId>transfer.facade.spring</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softexploration.lab.ejbspring</groupId>
+				<artifactId>transfer.service.ejb</artifactId>
+				<type>ejb</type>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softexploration.lab.ejbspring</groupId>
+				<artifactId>transfer.service.spring</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softexploration.lab.ejbspring</groupId>
+				<artifactId>transfer.facade</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softexploration.lab.ejbspring</groupId>
+				<artifactId>transfer.service</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.softexploration.lab.ejbspring</groupId>
+				<artifactId>transfer.webapp</artifactId>
+				<type>war</type>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<modules>
+		<module>../transfer.app</module>
+		<module>../transfer.facade.ejb</module>
+		<module>../transfer.facade.spring</module>
+		<module>../transfer.facade</module>
+		<module>../transfer.service.ejb</module>
+		<module>../transfer.service.spring</module>
+		<module>../transfer.service</module>
+		<module>../transfer.webapp</module>
+	</modules>
+	
+	<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+
+<!-- ============================================= Debut =================================================== -->
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.4.1</version>
+				<executions>
+					<execution>
+						<id>default</id>
+						<goals>
+							<goal>perform</goal>
+						</goals>
+						<configuration>
+							<pomFileName>
+								./pom.xml
+							</pomFileName>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+        </plugins>
+    </build>
+    
+    <scm>
+    <url>http://localhost/Bonobo.Git.Server/Repository/GeneralTestRepo</url>
+    <connection>scm:git:http://localhost/Bonobo.Git.Server/GeneralTestRepo.git</connection>
+    <developerConnection>scm:git:http://localhost/Bonobo.Git.Server/GeneralTestRepo.git</developerConnection>
+	</scm>
+	
+	<!-- Dans ce tag distributionManagement, indiquer à Maven où déposer les artifacts générés par la release. -->   
+	<!-- Emplacement où seront générés les artefacts après la création d'une release -->
+	 <distributionManagement>
+        <repository>
+            <id>repo</id>
+            <name>Local file system</name>
+            <url>file:///D:/tools/mavenReleases/repository/repo</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshotrepo</id>
+            <name>Local file system</name>
+            <url>file:///D:/tools/mavenReleases/repository/snapshotrepo</url>
+        </snapshotRepository>
+    </distributionManagement>
+	
+	
+</project>
