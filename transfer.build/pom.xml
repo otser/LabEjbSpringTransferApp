@@ -171,9 +171,9 @@
     </build>
     
     <scm>
-    <url>http://localhost/Bonobo.Git.Server/LabEjbSpringTransferApp.git</url>
-    <connection>scm:git:http://localhost/Bonobo.Git.Server/LabEjbSpringTransferApp.git</connection>
-    <developerConnection>scm:git:http://localhost/Bonobo.Git.Server/LabEjbSpringTransferApp.git</developerConnection>
+    <url>http://localhost/Bonobo.Git.Server/Repository/LabEjbSpringTransferApp</url>
+    <connection>scm:git:git://localhost/Bonobo.Git.Server/LabEjbSpringTransferApp.git</connection>
+    <developerConnection>scm:git:git://localhost/Bonobo.Git.Server/LabEjbSpringTransferApp.git</developerConnection>
 	<tag>transfer.build-0.0.1</tag>
   </scm>
 	
