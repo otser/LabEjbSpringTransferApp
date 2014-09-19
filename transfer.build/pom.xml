@@ -162,6 +162,7 @@
 							 <remoteTagging>true</remoteTagging>
 				        	<useReleaseProfile>false</useReleaseProfile>
 							<autoVersionSubmodules>true</autoVersionSubmodules>
+							<pushChanges>false</pushChanges>
 						</configuration>
 					</execution>
 				</executions>
