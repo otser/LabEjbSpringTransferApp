@@ -13,7 +13,7 @@ This ear module will be used only to package the entire application
 		<groupId>com.softexploration.lab.ejbspring</groupId>
 		<artifactId>transfer.build</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../transfer.build/pom.xml</relativePath>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<name>transfer.app</name>

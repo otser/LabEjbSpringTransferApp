@@ -11,7 +11,7 @@
 		<groupId>com.softexploration.lab.ejbspring</groupId>
 		<artifactId>transfer.build</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../transfer.build/pom.xml</relativePath>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<name>transfer.facade.spring</name>

@@ -122,14 +122,14 @@
 	</dependencyManagement>
 
 	<modules>
-		<module>../transfer.app</module>
-		<module>../transfer.facade.ejb</module>
-		<module>../transfer.facade.spring</module>
-		<module>../transfer.facade</module>
-		<module>../transfer.service.ejb</module>
-		<module>../transfer.service.spring</module>
-		<module>../transfer.service</module>
-		<module>../transfer.webapp</module>
+		<module>transfer.app</module>
+		<module>transfer.facade.ejb</module>
+		<module>transfer.facade.spring</module>
+		<module>transfer.facade</module>
+		<module>transfer.service.ejb</module>
+		<module>transfer.service.spring</module>
+		<module>transfer.service</module>
+		<module>transfer.webapp</module>
 	</modules>
 	
 	<build>
