@@ -182,16 +182,16 @@
     </build>
     
    <!--  
-   git remote add gitHub https://github.com/otser/TransfertRepo.git
+   git remote add gitHub https://github.com/otser/LabEjbSpringTransferApp.git
    
    	mvn release:clean
 	mvn release:prepare  -Dusername=otser -Dpassword=zeki2260  
 	mvn release:perform		
  -->
     	<scm>
-    <url>https://github.com/otser/TransfertRepo.git</url>
-    <connection>scm:git:https://github.com/otser/TransfertRepo.git</connection>
-    <developerConnection>scm:git:https://github.com/otser/TransfertRepo.git</developerConnection>	
+    <url>https://github.com/otser/LabEjbSpringTransferApp.git</url>
+    <connection>scm:git:https://github.com/otser/LabEjbSpringTransferApp.git</connection>
+    <developerConnection>scm:git:https://github.com/otser/LabEjbSpringTransferApp.git</developerConnection>	
  	 </scm>
 	
 	<!-- Dans ce tag distributionManagement, indiquer à Maven où déposer les artifacts générés par la release. -->   

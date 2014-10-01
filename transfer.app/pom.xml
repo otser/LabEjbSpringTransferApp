@@ -1,7 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
+<!--  
+This ear module will be used only to package the entire application
+-->
 	<groupId>com.softexploration.lab.ejbspring</groupId>
 	<artifactId>transfer.app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -21,7 +23,11 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+<!--  
+	In  <dependencies> tag you define the web and EJB modules as well as other libraries. Note that it’s very important to specify <type>war</type> for the web module. If you don’t Maven will look for a jar file.
+-->
 	<dependencies>
+		<!-- web and ejb modules -->
 		<dependency>
 			<groupId>com.softexploration.lab.ejbspring</groupId>
 			<artifactId>transfer.facade.ejb</artifactId>
@@ -53,6 +59,15 @@
 			<artifactId>transfer.webapp</artifactId>
 			<type>war</type>
 		</dependency>
+		
+		 <!-- Eventually external lucene libraries -->
+		 <!-- 
+		 <dependency>
+	      <groupId>org.apache.lucene</groupId>
+	      <artifactId>lucene-highlighter</artifactId>
+	      <version>2.4.1</version>
+	     </dependency>
+	      -->
 	</dependencies>
 
 	<build>
@@ -78,6 +93,15 @@
 							<artifactId>transfer.webapp</artifactId>
 							<contextRoot>webapp</contextRoot>
 						</webModule>
+						
+						<!--extra lucene libs into lucenelib directory -->
+			           <!--  <jarModule>
+			              <groupId>org.apache.lucene</groupId>
+			              <artifactId>lucene-highlighter</artifactId>
+			              <bundleDir>lucenlib</bundleDir>
+			            </jarModule> -->
+						
+						
 					</modules>
 				</configuration>
 			</plugin>
