@@ -3,13 +3,13 @@
 
 	<groupId>com.softexploration.lab.ejbspring</groupId>
 	<artifactId>transfer.webapp</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<parent>
 		<groupId>com.softexploration.lab.ejbspring</groupId>
 		<artifactId>transfer.build</artifactId>
-		<version>0.0.2</version>
+		<version>0.0.3-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 

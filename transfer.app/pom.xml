@@ -5,13 +5,13 @@ This ear module will be used only to package the entire application
 -->
 	<groupId>com.softexploration.lab.ejbspring</groupId>
 	<artifactId>transfer.app</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<packaging>ear</packaging>
 
 	<parent>
 		<groupId>com.softexploration.lab.ejbspring</groupId>
 		<artifactId>transfer.build</artifactId>
-		<version>0.0.2</version>
+		<version>0.0.3-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
