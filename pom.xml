@@ -195,7 +195,11 @@
 							It is possible to force some profiles to get enabled during release (for example to enable time-consuming tasks that are only relevant at release-time) 
 							by setting a comma separated list of profiles names in the releaseProfiles parameter. The goals and profiles required to release the project can then be configured in the POM:
 							 -->
+<<<<<<< HEAD
 							<releaseProfiles>release</releaseProfiles>
+=======
+							<releaseProfiles>releases</releaseProfiles>
+>>>>>>> 5f9abcb045c87e7d8b98b04212ba0dd348468da0
 						</configuration>
 					</execution>
 				</executions>
